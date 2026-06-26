@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Amanu Muhammed — Junior Software Engineer & Full-Stack Developer based in Bahir Dar, Ethiopia. Portfolio showcasing web applications, REST APIs, and scalable system design.">
+  <meta name="keywords" content="Full Stack Developer, Software Engineer, React, Node.js, Portfolio, Bahir Dar, Ethiopia">
+  <meta name="author" content="Amanu Muhammed">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Amanu Muhammed | Junior Software Engineer & Full-Stack Developer">
+  <meta property="og:description" content="Passionate software engineer building scalable web applications with React, Node.js, and cloud technologies.">
+  <meta property="og:url" content="https://yourusername.github.io/FUTURE_FS_001/">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Amanu Muhammed | Full-Stack Developer">
+  <meta name="twitter:description" content="Junior Software Engineer portfolio — backend systems, REST APIs, and modern web architecture.">
+
+  <title>Amanu Muhammed | Junior Software Engineer & Full-Stack Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZZ+ROSLyyUAv0Tw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Amanu Muhammed",
+    "jobTitle": "Junior Software Engineer & Full-Stack Developer",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bahir Dar",
+      "addressCountry": "Ethiopia"
+    },
+    "url": "https://yourusername.github.io/FUTURE_FS_001/",
+    "sameAs": [
+      "https://github.com/yourusername",
+      "https://linkedin.com/in/yourusername"
+    ],
+    "knowsAbout": ["JavaScript", "React", "Node.js", "MongoDB", "PostgreSQL", "REST APIs"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__content">
+      <div class="loader__spinner"></div>
+      <p class="loader__text">Loading Portfolio</p>
+    </div>
+  </div>
+
+  <!-- Skip Link (Accessibility) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="nav__logo" aria-label="Amanu Muhammed — Home">
+        <span class="nav__logo-bracket">&lt;</span>AM<span class="nav__logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#home" class="nav__link active">Home</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#education" class="nav__link">Education</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero section" id="home">
+      <div class="hero__bg-shapes" aria-hidden="true">
+        <div class="hero__shape hero__shape--1"></div>
+        <div class="hero__shape hero__shape--2"></div>
+      </div>
+      <div class="container hero__container">
+        <div class="hero__content">
+          <p class="hero__greeting animate-on-scroll">Hello, I'm</p>
+          <h1 class="hero__name animate-on-scroll">Amanu Muhammed</h1>
+          <h2 class="hero__title animate-on-scroll">
+            <span class="hero__title-text" id="typed-text"></span>
+            <span class="hero__cursor">|</span>
+          </h2>
+          <p class="hero__tagline animate-on-scroll">
+            Building scalable systems and clean interfaces — from database design to production deployment.
+          </p>
+          <p class="hero__summary animate-on-scroll">
+            Junior Software Engineer & Information Systems student in Bahir Dar, Ethiopia.
+            I specialize in backend architecture, REST APIs, and full-stack web applications
+            that solve real business problems.
+          </p>
+          <div class="hero__buttons animate-on-scroll">
+            <a href="#projects" class="btn btn--primary">
+              <i class="fas fa-code" aria-hidden="true"></i> View Projects
+            </a>
+            <a href="#contact" class="btn btn--secondary">
+              <i class="fas fa-envelope" aria-hidden="true"></i> Contact Me
+            </a>
+            <a href="assets/files/Amanu_Muhammed_Resume.pdf" class="btn btn--outline" download="Amanu_Muhammed_Resume.pdf">
+              <i class="fas fa-download" aria-hidden="true"></i> Download Resume
+            </a>
+          </div>
+          <div class="hero__social animate-on-scroll">
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:amanu.muhammed@email.com" aria-label="Send email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero__image animate-on-scroll">
+          <div class="hero__image-wrapper">
+            <img src="assets/images/profile.jpg" alt="Amanu Muhammed — Junior Software Engineer & Full-Stack Developer" class="hero__image-photo">
+            <div class="hero__image-ring"></div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll to about section">
+        <span>Scroll Down</span>
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__subtitle">Get To Know Me</span>
+          <h2 class="section__title">About Me</h2>
+        </header>
+
+        <div class="about__container">
+          <div class="about__image animate-on-scroll">
+            <img src="assets/images/profile.jpg" alt="Amanu Muhammed, Junior Software Engineer" class="about__image-photo">
+          </div>
+
+          <div class="about__content animate-on-scroll">
+            <h3 class="about__heading">Junior Software Engineer & Full-Stack Developer</h3>
+            <p class="about__short">
+              I build reliable web systems with clean code, thoughtful architecture, and a focus on real-world impact.
+            </p>
+            <p>
+              I am a passionate Junior Software Engineer and Information Systems student based in Bahir Dar, Ethiopia,
+              with a strong focus on backend development, system architecture, and cloud-ready applications. My work
+              spans the full development lifecycle — from database schema design and REST API development to responsive
+              frontend implementation and deployment on Linux and AWS environments.
+            </p>
+            <p>
+              I have hands-on experience building production-oriented applications using React, Next.js, TypeScript,
+              Node.js, Express.js, NestJS, Django, PostgreSQL, MongoDB, and Docker. Whether I am designing authentication
+              flows, optimizing query performance, or integrating third-party services like Stripe, I prioritize
+              maintainable code and solutions that scale with business needs.
+            </p>
+            <p>
+              My mission is to grow as an engineer by contributing to teams that value technical excellence, continuous
+              learning, and software that makes a measurable difference. I am actively seeking internship and junior
+              developer roles where I can deepen my expertise in scalable systems and modern web architecture.
+            </p>
+
+            <blockquote class="about__mission">
+              <i class="fas fa-quote-left" aria-hidden="true"></i>
+              <p>Engineer systems that are reliable today and adaptable tomorrow — code that teams can trust and extend.</p>
+            </blockquote>
+
+            <div class="about__info">
+              <div class="about__info-item">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                <span>Bahir Dar, Ethiopia</span>
+              </div>
+              <div class="about__info-item">
+                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                <span>Information Systems Student</span>
+              </div>
+              <div class="about__info-item">
+                <i class="fas fa-briefcase" aria-hidden="true"></i>
+                <span>Available for Internships</span>
+              </div>
+            </div>
+
+            <a href="#contact" class="btn btn--primary">Let's Work Together</a>
+          </div>
+        </div>
+
+        <!-- Why Hire Me -->
+        <div class="why-hire animate-on-scroll">
+          <h3 class="why-hire__title">Why Hire Me</h3>
+          <div class="why-hire__grid">
+            <article class="why-hire__card">
+              <div class="why-hire__icon"><i class="fas fa-layer-group"></i></div>
+              <h4>Full-Stack Capability</h4>
+              <p>I work comfortably across frontend, backend, and database layers — reducing handoff friction on small teams.</p>
+            </article>
+            <article class="why-hire__card">
+              <div class="why-hire__icon"><i class="fas fa-server"></i></div>
+              <h4>Backend-First Mindset</h4>
+              <p>Strong in API design, authentication, and data modeling — the foundation every reliable application needs.</p>
+            </article>
+            <article class="why-hire__card">
+              <div class="why-hire__icon"><i class="fas fa-cloud"></i></div>
+              <h4>Deployment Ready</h4>
+              <p>Experience with Docker, AWS, and Linux environments means I can take features from development to production.</p>
+            </article>
+            <article class="why-hire__card">
+              <div class="why-hire__icon"><i class="fas fa-users"></i></div>
+              <h4>Collaborative & Growth-Oriented</h4>
+              <p>I communicate clearly, document my work, and actively seek feedback to improve as an engineer.</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Career Goals -->
+        <div class="career-goals animate-on-scroll">
+          <h3 class="career-goals__title">Career Goals</h3>
+          <ul class="career-goals__list">
+            <li>Contribute to innovative software projects in backend-heavy and full-stack roles</li>
+            <li>Deepen expertise in scalable system design, cloud infrastructure, and distributed architectures</li>
+            <li>Build production experience with modern frameworks including NestJS, Next.js, and AI-integrated applications</li>
+            <li>Grow into a software engineer who delivers maintainable systems that teams rely on long-term</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__subtitle">What I Work With</span>
+          <h2 class="section__title">Skills & Technologies</h2>
+        </header>
+
+        <div class="skills__grid">
+          <!-- Frontend -->
+          <div class="skills__category animate-on-scroll">
+            <div class="skills__category-header">
+              <i class="fas fa-paint-brush"></i>
+              <h3>Frontend</h3>
+            </div>
+            <div class="skills__items">
+              <div class="skill-card">
+                <div class="skill-card__header">
+                  <span class="skill-card__name">HTML</span>
+                  <span class="skill-card__percent">92%</span>
+                </div>
+                <div class="skill-card__bar"><div class="skill-card__progress" data-progress="92"></div></div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-card__header">
+                  <span class="skill-card__name">CSS</span>
+                  <span class="skill-card__percent">88%</span>
+                </div>
+                <div class="skill-card__bar"><div class="skill-card__progress" data-progress="88"></div></div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-card__header">
+                  <span class="skill-card__name">JavaScript</span>
+                  <span class="skill-card__percent">90%</span>
+                </div>
+                <div class="skill-card__bar"><div class="skill-card__progress" data-progress="90"></div></div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-card__header">
+                  <span class="skill-card__name">React</span>
+                  <span class="skill-card__percent">85%</span>
+                </div>
+                <div class="skill-card__bar"><div class="skill-card__progress" data-progress="85"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skills__category animate-on-scroll">
+            <div class="skills__category-header">
+              <i class="fas fa-cogs"></i>
+              <h3>Backend</h3>
+            </div>
+            <div class="skills__items">
+              <div class="skill-card">
+                <div class="skill-card__header">
+                  <span class="skill-card__name">Node.js</span>
+                  <span class="skill-card__percent">88%</span>
+                </div>
+                <div class="skill-card__bar"><div class="skill-card__progress" data-progress="88"></div></div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-card__header">
+                  <span class="skill-card__name">Express.js</span>
+                  <span class="skill-card__percent">86%</span>
+                </div>
+                <div class="skill-card__bar"><div class="skill-card__progress" data-progress="86"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="skills__category animate-on-scroll">
+            <div class="skills__category-header">
+              <i class="fas fa-database"></i>
+              <h3>Database</h3>
+            </div>
+            <div class="skills__items">
+              <div class="skill-card">
+                <div class="skill-card__header">
+                  <span class="skill-card__name">MongoDB</span>
+                  <span class="skill-card__percent">84%</span>
+                </div>
+                <div class="skill-card__bar"><div class="skill-card__progress" data-progress="84"></div></div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-card__header">
+                  <span class="skill-card__name">MySQL</span>
+                  <span class="skill-card__percent">80%</span>
+                </div>
+                <div class="skill-card__bar"><div class="skill-card__progress" data-progress="80"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skills__category animate-on-scroll">
+            <div class="skills__category-header">
+              <i class="fas fa-tools"></i>
+              <h3>Tools</h3>
+            </div>
+            <div class="skills__items">
+              <div class="skill-card">
+                <div class="skill-card__header">
+                  <span class="skill-card__name">Git</span>
+                  <span class="skill-card__percent">90%</span>
+                </div>
+                <div class="skill-card__bar"><div class="skill-card__progress" data-progress="90"></div></div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-card__header">
+                  <span class="skill-card__name">GitHub</span>
+                  <span class="skill-card__percent">92%</span>
+                </div>
+                <div class="skill-card__bar"><div class="skill-card__progress" data-progress="92"></div></div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-card__header">
+                  <span class="skill-card__name">VS Code</span>
+                  <span class="skill-card__percent">95%</span>
+                </div>
+                <div class="skill-card__bar"><div class="skill-card__progress" data-progress="95"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional tech badges -->
+        <div class="skills__badges animate-on-scroll">
+          <span class="skill-badge">TypeScript</span>
+          <span class="skill-badge">Next.js</span>
+          <span class="skill-badge">NestJS</span>
+          <span class="skill-badge">Django</span>
+          <span class="skill-badge">PostgreSQL</span>
+          <span class="skill-badge">Docker</span>
+          <span class="skill-badge">AWS</span>
+          <span class="skill-badge">Linux</span>
+          <span class="skill-badge">REST APIs</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__subtitle">My Work</span>
+          <h2 class="section__title">Featured Projects</h2>
+        </header>
+
+        <div class="projects__grid">
+          <!-- Project 1 -->
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__image project-card__image--1" role="img" aria-label="Mosque Management Platform screenshot placeholder">
+              <div class="project-card__overlay">
+                <a href="https://github.com/yourusername/mosque-management" target="_blank" rel="noopener noreferrer" class="project-card__overlay-link" aria-label="View Mosque Management on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__overlay-link" aria-label="View Mosque Management live demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Mosque Management Platform</h3>
+              <p class="project-card__desc">
+                Full-stack community management system with prayer schedules, donation tracking,
+                event announcements, and facility booking — deployed with Docker on AWS.
+              </p>
+              <div class="project-card__tech">
+                <span>Django</span><span>React</span><span>PostgreSQL</span><span>Docker</span><span>AWS</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/yourusername/mosque-management" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--outline">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__image project-card__image--2" role="img" aria-label="E-Commerce Platform screenshot placeholder">
+              <div class="project-card__overlay">
+                <a href="https://github.com/yourusername/ecommerce-platform" target="_blank" rel="noopener noreferrer" class="project-card__overlay-link" aria-label="View E-Commerce Platform on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__overlay-link" aria-label="View E-Commerce Platform live demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">E-Commerce Platform</h3>
+              <p class="project-card__desc">
+                Modern online store with product catalog, shopping cart, Stripe payment integration,
+                and a full admin dashboard for inventory and order management.
+              </p>
+              <div class="project-card__tech">
+                <span>Next.js</span><span>Node.js</span><span>PostgreSQL</span><span>Stripe</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/yourusername/ecommerce-platform" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--outline">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__image project-card__image--3" role="img" aria-label="Food Ordering Application screenshot placeholder">
+              <div class="project-card__overlay">
+                <a href="https://github.com/yourusername/food-ordering-app" target="_blank" rel="noopener noreferrer" class="project-card__overlay-link" aria-label="View Food Ordering App on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__overlay-link" aria-label="View Food Ordering App live demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Food Ordering Application</h3>
+              <p class="project-card__desc">
+                Responsive food delivery app with menu browsing, cart management, and a streamlined
+                checkout flow built with TypeScript for type-safe, maintainable code.
+              </p>
+              <div class="project-card__tech">
+                <span>Next.js</span><span>React</span><span>Tailwind CSS</span><span>TypeScript</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/yourusername/food-ordering-app" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--outline">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__image project-card__image--4" role="img" aria-label="REST API Task Manager screenshot placeholder">
+              <div class="project-card__overlay">
+                <a href="https://github.com/yourusername/task-api" target="_blank" rel="noopener noreferrer" class="project-card__overlay-link" aria-label="View Task API on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__overlay-link" aria-label="View Task API live demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">REST API Task Manager</h3>
+              <p class="project-card__desc">
+                Secure task management REST API with JWT authentication, role-based access control,
+                MongoDB data persistence, and comprehensive API documentation.
+              </p>
+              <div class="project-card__tech">
+                <span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>JWT</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/yourusername/task-api" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--outline">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience section" id="experience">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__subtitle">My Journey</span>
+          <h2 class="section__title">Experience</h2>
+        </header>
+
+        <div class="timeline">
+          <article class="timeline__item animate-on-scroll">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <span class="timeline__date">2025 — Present</span>
+              <h3 class="timeline__title">Software Development Intern</h3>
+              <h4 class="timeline__company">Tech Solutions Ethiopia</h4>
+              <p>
+                Contributed to full-stack web application development using React and Node.js.
+                Built REST API endpoints, implemented user authentication, participated in code reviews,
+                and collaborated with senior developers on database optimization and deployment workflows.
+              </p>
+              <ul class="timeline__tags">
+                <li>React</li><li>Node.js</li><li>REST APIs</li><li>Git</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline__item animate-on-scroll">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <span class="timeline__date">2024 — 2025</span>
+              <h3 class="timeline__title">Academic Project Lead</h3>
+              <h4 class="timeline__company">Bahir Dar University — Information Systems</h4>
+              <p>
+                Led development of the Mosque Management Platform as a capstone project.
+                Managed team coordination, system architecture decisions, PostgreSQL schema design,
+                and AWS deployment using Docker containers.
+              </p>
+              <ul class="timeline__tags">
+                <li>Django</li><li>PostgreSQL</li><li>Docker</li><li>AWS</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline__item animate-on-scroll">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <span class="timeline__date">2023 — 2024</span>
+              <h3 class="timeline__title">Freelance Web Developer</h3>
+              <h4 class="timeline__company">Self-Employed</h4>
+              <p>
+                Delivered custom websites and web applications for local businesses in Bahir Dar.
+                Handled requirements gathering, UI design, full-stack development, and client communication
+                from proposal through deployment and maintenance.
+              </p>
+              <ul class="timeline__tags">
+                <li>HTML/CSS</li><li>JavaScript</li><li>WordPress</li><li>MySQL</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline__item animate-on-scroll">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <span class="timeline__date">2023 — Present</span>
+              <h3 class="timeline__title">Personal Open-Source Projects</h3>
+              <h4 class="timeline__company">GitHub Portfolio</h4>
+              <p>
+                Continuously building and publishing personal projects including e-commerce platforms,
+                food ordering apps, and REST APIs. Focus on learning modern frameworks, writing clean
+                documentation, and applying best practices in version control and testing.
+              </p>
+              <ul class="timeline__tags">
+                <li>Next.js</li><li>TypeScript</li><li>MongoDB</li><li>Stripe</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education section" id="education">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__subtitle">Academic Background</span>
+          <h2 class="section__title">Education</h2>
+        </header>
+
+        <div class="education__grid">
+          <article class="education__card animate-on-scroll">
+            <div class="education__icon"><i class="fas fa-university"></i></div>
+            <span class="education__date">2022 — Present</span>
+            <h3 class="education__degree">BSc in Information Systems</h3>
+            <h4 class="education__school">Bahir Dar University</h4>
+            <p>
+              Studying software engineering fundamentals, database systems, system analysis and design,
+              networking, and enterprise application development. Active in programming clubs and hackathons.
+            </p>
+          </article>
+
+          <article class="education__card animate-on-scroll">
+            <div class="education__icon"><i class="fas fa-certificate"></i></div>
+            <span class="education__date">2024</span>
+            <h3 class="education__degree">Full-Stack Web Development</h3>
+            <h4 class="education__school">Online Professional Certification</h4>
+            <p>
+              Completed intensive training in MERN stack development, REST API design,
+              authentication patterns, and deployment workflows on cloud platforms.
+            </p>
+          </article>
+
+          <article class="education__card animate-on-scroll">
+            <div class="education__icon"><i class="fas fa-cloud"></i></div>
+            <span class="education__date">2025</span>
+            <h3 class="education__degree">Cloud & DevOps Fundamentals</h3>
+            <h4 class="education__school">Self-Directed Learning</h4>
+            <p>
+              Hands-on study of Docker containerization, AWS services (EC2, S3, RDS),
+              Linux server administration, and CI/CD pipeline concepts.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__subtitle">What I Offer</span>
+          <h2 class="section__title">Services</h2>
+        </header>
+
+        <div class="services__grid">
+          <article class="service-card animate-on-scroll">
+            <div class="service-card__icon"><i class="fas fa-laptop-code"></i></div>
+            <h3 class="service-card__title">Frontend Development</h3>
+            <p>Responsive, accessible interfaces built with HTML, CSS, JavaScript, and React — optimized for performance and user experience.</p>
+          </article>
+
+          <article class="service-card animate-on-scroll">
+            <div class="service-card__icon"><i class="fas fa-code-branch"></i></div>
+            <h3 class="service-card__title">Full Stack Development</h3>
+            <p>End-to-end web applications from database design and API development to frontend integration and production deployment.</p>
+          </article>
+
+          <article class="service-card animate-on-scroll">
+            <div class="service-card__icon"><i class="fas fa-palette"></i></div>
+            <h3 class="service-card__title">Website Design</h3>
+            <p>Clean, modern website layouts with professional typography, consistent branding, and mobile-first responsive design.</p>
+          </article>
+
+          <article class="service-card animate-on-scroll">
+            <div class="service-card__icon"><i class="fas fa-wrench"></i></div>
+            <h3 class="service-card__title">Website Maintenance</h3>
+            <p>Ongoing support including bug fixes, performance optimization, security updates, and feature enhancements for existing sites.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section" id="testimonials">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__subtitle">Client Feedback</span>
+          <h2 class="section__title">Testimonials</h2>
+        </header>
+
+        <div class="testimonials__grid">
+          <blockquote class="testimonial-card animate-on-scroll">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>"Amanu delivered our community management platform ahead of schedule. His attention to database design and clean API structure made future development straightforward for our team."</p>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">ST</div>
+              <div>
+                <cite class="testimonial-card__name">Samuel Tadesse</cite>
+                <span class="testimonial-card__role">Project Supervisor, Bahir Dar University</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card animate-on-scroll">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>"Working with Amanu on our e-commerce site was seamless. He understood our business requirements quickly and built a reliable payment-integrated platform that our customers use daily."</p>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">MH</div>
+              <div>
+                <cite class="testimonial-card__name">Meron Hailu</cite>
+                <span class="testimonial-card__role">Small Business Owner, Bahir Dar</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card animate-on-scroll">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>"Amanu is a dedicated developer who communicates clearly and writes maintainable code. His backend skills and willingness to learn made him a valuable contributor during his internship."</p>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">DK</div>
+              <div>
+                <cite class="testimonial-card__name">Daniel Kebede</cite>
+                <span class="testimonial-card__role">Senior Developer, Tech Solutions Ethiopia</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__subtitle">Get In Touch</span>
+          <h2 class="section__title">Contact Me</h2>
+        </header>
+
+        <div class="contact__container">
+          <div class="contact__info animate-on-scroll">
+            <h3>Let's build something together</h3>
+            <p>
+              I'm open to internship opportunities, freelance projects, and collaborations.
+              Whether you have a question or a project idea, feel free to reach out.
+            </p>
+
+            <ul class="contact__details">
+              <li>
+                <div class="contact__detail-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <span class="contact__detail-label">Email</span>
+                  <a href="mailto:amanu.muhammed@email.com">amanu.muhammed@email.com</a>
+                </div>
+              </li>
+              <li>
+                <div class="contact__detail-icon"><i class="fab fa-github"></i></div>
+                <div>
+                  <span class="contact__detail-label">GitHub</span>
+                  <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">github.com/yourusername</a>
+                </div>
+              </li>
+              <li>
+                <div class="contact__detail-icon"><i class="fab fa-linkedin-in"></i></div>
+                <div>
+                  <span class="contact__detail-label">LinkedIn</span>
+                  <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourusername</a>
+                </div>
+              </li>
+              <li>
+                <div class="contact__detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <span class="contact__detail-label">Location</span>
+                  <span>Bahir Dar, Ethiopia</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact__form animate-on-scroll" id="contact-form" novalidate>
+            <div class="form__group">
+              <label for="name">Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name">
+              <span class="form__error" id="name-error"></span>
+            </div>
+            <div class="form__group">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" placeholder="your.email@example.com" required autocomplete="email">
+              <span class="form__error" id="email-error"></span>
+            </div>
+            <div class="form__group">
+              <label for="subject">Subject <span aria-hidden="true">*</span></label>
+              <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+              <span class="form__error" id="subject-error"></span>
+            </div>
+            <div class="form__group">
+              <label for="message">Message <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+              <span class="form__error" id="message-error"></span>
+            </div>
+            <div class="form__status" id="form-status" role="alert" aria-live="polite"></div>
+            <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <a href="#home" class="footer__logo">
+          <span class="nav__logo-bracket">&lt;</span>AM<span class="nav__logo-bracket">/&gt;</span>
+        </a>
+        <p>Junior Software Engineer building scalable web applications from Bahir Dar, Ethiopia.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__social">
+        <h4>Connect</h4>
+        <div class="footer__social-links">
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:amanu.muhammed@email.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; <span id="current-year"></span> Amanu Muhammed. All rights reserved.</p>
+        <p class="footer__credit">Built with HTML, CSS & JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
