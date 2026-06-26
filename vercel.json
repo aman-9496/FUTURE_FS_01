@@ -1,0 +1,4 @@
+{
+  "outputDirectory": "client",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}

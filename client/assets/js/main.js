@@ -389,6 +389,49 @@
   }
 
   /* --------------------------------------------------------------------------
+     About Panel — Tabs + Counter Animation
+     -------------------------------------------------------------------------- */
+  function initAboutPanel() {
+    // Tab switching
+    document.querySelectorAll('.about__tab').forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        document.querySelectorAll('.about__tab').forEach((t) => t.classList.remove('active'));
+        document.querySelectorAll('.about__tab-panel').forEach((p) => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(`tab-${target}`).classList.add('active');
+
+        // Trigger counters when Stats tab is opened
+        if (target === 'stats') animateCounters();
+      });
+    });
+
+    // Auto-trigger counters if Stats tab is visible on scroll
+    const statsPanel = document.getElementById('tab-stats');
+    if (statsPanel) {
+      const obs = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) { animateCounters(); obs.disconnect(); }
+      }, { threshold: 0.5 });
+      obs.observe(statsPanel);
+    }
+  }
+
+  function animateCounters() {
+    document.querySelectorAll('.about__stat-num').forEach((el) => {
+      const target = parseInt(el.dataset.count, 10);
+      if (el.dataset.animated) return;
+      el.dataset.animated = '1';
+      let current = 0;
+      const step = Math.ceil(target / 30);
+      const timer = setInterval(() => {
+        current = Math.min(current + step, target);
+        el.textContent = current + (target > 5 ? '+' : '');
+        if (current >= target) clearInterval(timer);
+      }, 40);
+    });
+  }
+
+  /* --------------------------------------------------------------------------
      Initialize All Modules
      -------------------------------------------------------------------------- */
   function init() {
@@ -402,6 +445,7 @@
     initSkillBars();
     initContactForm();
     initFooter();
+    initAboutPanel();
   }
 
   // Run when DOM is ready

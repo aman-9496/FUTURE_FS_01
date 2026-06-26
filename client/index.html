@@ -167,8 +167,70 @@
         </header>
 
         <div class="about__container">
-          <div class="about__image animate-on-scroll">
-            <img src="assets/images/profile.jpg" alt="Amanu Muhammed, Junior Software Engineer" class="about__image-photo">
+          <div class="about__panel animate-on-scroll">
+
+            <!-- Identity header -->
+            <div class="about__panel-header">
+              <div class="about__panel-avatar">AM</div>
+              <div>
+                <p class="about__panel-name">Amanu Muhammed</p>
+                <p class="about__panel-title">Full-Stack Developer</p>
+                <p class="about__panel-status"><span class="about__panel-dot"></span>Open to opportunities</p>
+              </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="about__tabs">
+              <button class="about__tab active" data-tab="facts">Quick Facts</button>
+              <button class="about__tab" data-tab="stats">Numbers</button>
+              <button class="about__tab" data-tab="fun">Beyond Code</button>
+            </div>
+
+            <!-- Tab: Quick Facts -->
+            <div class="about__tab-panel active" id="tab-facts">
+              <ul class="about__fact-list">
+                <li><i class="fas fa-map-marker-alt"></i><span>Bahir Dar, Ethiopia</span></li>
+                <li><i class="fas fa-graduation-cap"></i><span>BSc Information Systems — BDU</span></li>
+                <li><i class="fas fa-code"></i><span>2+ years building web apps</span></li>
+                <li><i class="fas fa-server"></i><span>Backend-first, full-stack capable</span></li>
+                <li><i class="fas fa-language"></i><span>English · Amharic</span></li>
+                <li><i class="fas fa-clock"></i><span>UTC+3 (EAT) — flexible hours</span></li>
+              </ul>
+            </div>
+
+            <!-- Tab: Stats -->
+            <div class="about__tab-panel" id="tab-stats">
+              <div class="about__stats-grid">
+                <div class="about__stat">
+                  <span class="about__stat-num" data-count="10">0</span>
+                  <span class="about__stat-label">Projects Built</span>
+                </div>
+                <div class="about__stat">
+                  <span class="about__stat-num" data-count="8">0</span>
+                  <span class="about__stat-label">Technologies</span>
+                </div>
+                <div class="about__stat">
+                  <span class="about__stat-num" data-count="3">0</span>
+                  <span class="about__stat-label">Clients Served</span>
+                </div>
+                <div class="about__stat">
+                  <span class="about__stat-num" data-count="2">0</span>
+                  <span class="about__stat-label">Years Coding</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab: Fun / Beyond Code -->
+            <div class="about__tab-panel" id="tab-fun">
+              <ul class="about__fact-list">
+                <li><i class="fas fa-book"></i><span>Avid reader — system design books</span></li>
+                <li><i class="fas fa-chess"></i><span>Chess player — strategic thinker</span></li>
+                <li><i class="fas fa-mosque"></i><span>Community tech volunteer</span></li>
+                <li><i class="fas fa-seedling"></i><span>Mentoring student developers</span></li>
+                <li><i class="fas fa-coffee"></i><span>Best ideas come with Ethiopian coffee</span></li>
+              </ul>
+            </div>
+
           </div>
 
           <div class="about__content animate-on-scroll">
